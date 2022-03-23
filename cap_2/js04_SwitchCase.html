@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS04_SwitchCase</title>
+</head>
+<body>
+    <h3>SwitchCase</h3>
+    <!--Formulario html-->
+    <form name="formCalend" action="" method="post">
+        Digite o mes (01 a 12): <input type="text" name="f_mes" size="4" maxlength="2" /><p></p>
+        <input type="button" name="btn_processar" value="Processar" onclick="verificaMes()"/>
+        <input type="reset" name="btn_cancelar" value="Cancelar"/>
+        O mes correspondente é: <input type="text" name="f_NomeMes" size="18" maxlength="15" />
+    </form>
+
+    </form>
+    <script>
+        /*Definição de variaveis*/
+        var js_mes;
+
+        /*função*/
+        function verificaMes(){
+
+            /*Pega o nome do mes digitado*/
+            js_mes = parseInt(document.formCalend.f_mes.value);
+
+            /*Estrutura do switchCase*/
+            switch (js_mes){
+                case 1: document.formCalend.f_NomeMes.value = 'Janeiro'; break;
+                    case 2: document.formCalend.f_NomeMes.value = 'fevereiro'; break;
+                case 3: document.formCalend.f_NomeMes.value = 'Março'; break;
+                case 4: document.formCalend.f_NomeMes.value = 'Abril'; break;
+                case 5: document.formCalend.f_NomeMes.value = 'Maio'; break;
+                case 6: document.formCalend.f_NomeMes.value = 'Junho'; break;
+                case 7: document.formCalend.f_NomeMes.value = 'Julho'; break;
+                case 8: document.formCalend.f_NomeMes.value = 'Agosto'; break;
+                case 9: document.formCalend.f_NomeMes.value = 'Setembro'; break;
+                case 10: document.formCalend.f_NomeMes.value = 'Outubro'; break;
+                case 11: document.formCalend.f_NomeMes.value = 'Novembro'; break;
+                case 12: document.formCalend.f_NomeMes.value = 'Dezembro'; break;
+            default: document.formCalend.f_NomeMes.value = '**Mes invalido**'; break;
+            }
+        }
+        /*Entrada de dados*/
+
+        /*Saida de dados*/
+
+
+    </script>
+
+</body>
+</html>
